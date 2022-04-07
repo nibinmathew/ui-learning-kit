@@ -1,0 +1,118 @@
+<doctype html>
+<html lang="en">
+<head>
+<title> Learn Dialog Controls  </title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<script type="text/javascript" src="Program Files/js.js"> </script>
+<link rel="stylesheet" href="Program Files/styles.css">
+<!-- <script type="text/javascript" src="Program Files/treejs.js"></script> -->
+<script type="text/javascript" src="Program Files/list.js"></script>
+<!-- <link rel="stylesheet" href="Program Files/treestyle.css" /> -->
+</head>
+
+<body role="application">
+<!-- backgrount music player -->
+<audio class="audio-backgrount"  id="audio1" controls style="display:none" autoplay>
+  <source src="Program Files/sounds/backgrount.wav" type="audio/mpeg"> Your browser does not support the audio element.
+</audio>
+
+<audio class="audio-change"  id="change" controls style="display:none">
+  <source src="Program Files/sounds/change.wav" type="audio/mpeg"> Your browser does not support the audio element.
+</audio>
+
+<!-- page controls -->
+<h1 role="ap" tabindex="0" class="h1" id="h1"> Dialog Control </h1>
+
+<!-- Description box for the transcription -->
+<div class = "topcorner discription" id = "desc" aria-live="assertive">
+  Sample discription 
+</div>
+
+<div>
+  <label for="editbox"> Student Name:</label> 
+  <input type="text" class="editbox" name="name" id="editbox">
+</div>
+
+<!- Combo box ->                  
+<label for="language">Select the language that you would like to speak: </label>
+<select name="languages" class="language" id="language"/>
+  <option value="Kannada">Kannada</option>
+  <option value="Malayalam">Malayalam</option>
+  <option value="Hindi">Hindi</option>
+  <option value="Bangala">Bangala</option>
+  <option value="Tamil">Tamil</option>
+</select>
+
+<div>
+  <label for="editcombo">Select the country:</label>
+<input type="text" class="editcombo" id="editcombo" name="country" list="countryName"/>
+    <datalist id="countryName">
+        <option value="Sweden">Sweeden</option>
+        <option value="Canada">Canada</option>
+        <option value="India"></option>
+        <option value="America">America</option>
+    </datalist>
+  </div>
+
+<div>
+  <label for="slider">Volume control</label>
+<INPUT TYPE="RANGE" class="slider" id="slider" 
+MIN="0" MAX="100" STEP="10" 
+onchange="setVolume(this.value/100)">
+</div>
+
+<!-- button control -->
+<div>
+  <input type="button" value="ok" name="ok" id="button" class="button" onclick="okFunction()">
+  <span aria-live="polite" id="buttonMessage" class="buttonMessage" ></span>
+</div>
+
+<! radio buttons ->
+
+<fieldset role="document">
+    <legend class="radiobuttons" id="radiobuttons" tabindex="0"> Select your favorite fruit from below</legend>
+    <input type="radio" id="r1" name="radio_button"> 
+<label for="r1"> Mango</label>
+    <input type="radio" id="r2" name="radio_button"> 
+<label for="r2"> Apple </label>
+    <input type="radio" id="r3" name="radio_button"> 
+<label for="r3"> Orange </label>
+</fieldset>
+
+
+<!- check box ->
+
+<fieldset role="document">
+            <legend class="checkbox" id="checkbox" tabindex="0"> Select all the items you like to do </legend>
+            <input type="checkbox" name="check-box" value="Music" id="music"> <label for="music" style="color: green">Music</label><br>
+            <input type="checkbox" name="check-box" value="Swimming" id="swimming"> <label for="swimming" style="color: green">Swimming</label><br>
+            <input type="checkbox" name="check-box" value="Sleeping"  id="sleeping"> <label for="sleeping" style="color: green">Sleeping</label>
+            <input type="checkbox" name="check-box" value="Reading books"  id="reading"> <label for="reading" style="color: green">Reading books</label>
+            </fieldset>
+
+
+<div role="document" tabindex="0" id="list">
+  <legend> check the android application list</legend> 
+      <ul style="list-style-type:none"  id = "list1">
+         <li>Item 1</li>
+         <li>Item 2</li>
+         <li>Item 3</li>
+         <li>Item 4</li>
+      </ul>
+</div>
+
+<a href="tree.html" class="link" id="link">NEXT PAGE</a>
+
+<script>
+  
+
+var ul = document.getElementById("list1");
+var liSelected;
+var index = -1;
+    </script>
+    
+    <script type="text/javascript" src="Program Files/interaction.js"> </script>
+</body>
+</html>

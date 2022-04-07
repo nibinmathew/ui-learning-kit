@@ -1,0 +1,30 @@
+*:focus {
+  outline: 5px solid rgb(17, 0, 255);
+  /* box-shadow: 0 0 10px #719ece; */
+}
+
+textarea:focus {
+  outline: 5px solid rgb(17, 0, 255);
+  /* box-shadow: 0 0 10px #719ece; */
+}
+
+.topcorner {
+  position: absolute;
+  padding: 50px 50px 50px 50px;
+  top: 100;
+  right: 100;
+  border: 5px solid black;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  width: 400px;
+}
+
+li.selected {
+  outline: 5px solid rgb(17, 0, 255);
+}
+
+body {
+  padding: 25px 25px 25px 25px;
+  font-size: 20px;
+}
